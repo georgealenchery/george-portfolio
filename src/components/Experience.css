@@ -1,0 +1,140 @@
+.experience {
+  padding: 120px 60px;
+  border-top: var(--border);
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-entry {
+  padding: 40px 0;
+  border-bottom: var(--border);
+}
+
+.experience-entry:first-child {
+  border-top: var(--border);
+}
+
+.experience-body {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  align-items: start;
+}
+
+.experience-body--reverse {
+  grid-template-columns: 400px 1fr;
+}
+
+.experience-body--reverse .experience-image-wrap {
+  order: -1;
+}
+
+.experience-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.experience-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.experience-company {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.experience-role {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.experience-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.experience-period {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.experience-location {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.experience-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.experience-image-wrap {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.experience-image {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 80px 24px;
+  }
+
+  .experience-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .experience-right {
+    align-items: flex-start;
+  }
+
+  .experience-company {
+    font-size: 22px;
+  }
+
+  .experience-image {
+    height: 220px;
+  }
+}

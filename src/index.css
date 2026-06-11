@@ -1,0 +1,52 @@
+:root {
+  --bg: #141414;
+  --card-bg: #1E1E1E;
+  --text: #F0EDE6;
+  --muted: #888888;
+  --accent: #00FF6A;
+  --border: 2px solid #F0EDE6;
+  --shadow: 4px 4px 0px #00FF6A;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Hero effects */
+.hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content,
+.hero-images,
+.hero-scroll {
+  position: relative;
+  z-index: 1;
+}

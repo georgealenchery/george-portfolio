@@ -1,0 +1,31 @@
+.stack {
+  padding: 120px 60px;
+  border-top: var(--border);
+}
+
+.stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stack-tag {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text);
+  border: var(--border);
+  padding: 8px 16px;
+  background: var(--bg);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .stack {
+    padding: 80px 24px;
+  }
+
+  .stack-tag {
+    font-size: 13px;
+    padding: 7px 13px;
+  }
+}
