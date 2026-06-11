@@ -11,12 +11,12 @@ export default function Contact() {
             georgealenchery70@gmail.com
           </a>
           <a
-            href="https://www.linkedin.com/in/george-alenchery"
+            href="https://www.linkedin.com/in/georgealenchery/"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-link"
           >
-            linkedin.com/in/george-alenchery
+            linkedin.com/in/georgealenchery
           </a>
         </div>
       </div>
