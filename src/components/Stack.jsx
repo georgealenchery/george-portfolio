@@ -1,19 +1,20 @@
 import './Stack.css'
 
 const tags = [
-  'Python', 'PyTorch', 'scikit-learn', 'Pandas', 'NumPy',
+  'Python', 'C', 'C++', 'Java', 'JavaScript', 'TypeScript',
+  'PyTorch', 'scikit-learn', 'Pandas', 'NumPy',
   'React', 'Vite', 'Node.js', 'Express', 'Mapbox GL JS',
   'Unity', 'C#', 'SQL', 'Git', 'Figma', 'LaTeX',
 ]
 
+const tagString = tags.join(' · ') + ' · '
+
 export default function Stack() {
   return (
-    <section id="stack" className="stack">
-      <span className="section-label">// STACK</span>
-      <div className="stack-grid">
-        {tags.map((tag) => (
-          <span key={tag} className="stack-tag">{tag}</span>
-        ))}
+    <section id="stack" className="stack-ticker">
+      <div className="ticker-track">
+        <span className="ticker-list" aria-hidden="false">{tagString}</span>
+        <span className="ticker-list" aria-hidden="true">{tagString}</span>
       </div>
     </section>
   )

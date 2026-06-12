@@ -11,10 +11,10 @@ export default function App() {
     <>
       <Nav />
       <Hero />
+      <Stack />
       <Background />
       <Experience />
       <Projects />
-      <Stack />
       <Contact />
     </>
   )

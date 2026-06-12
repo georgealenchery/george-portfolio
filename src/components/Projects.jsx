@@ -16,13 +16,14 @@ const projects = [
     category: 'Research / Robotics',
     role: 'Lead Author & Head Researcher',
     link: 'https://arxiv.org/abs/2605.02716',
-  },
+  },  
   {
-    name: 'Building a Rocket, Nexum Technologies',
-    description: 'Building a single stage rocket with a commercial payload, set to launch in September 2026',
+    name: 'Rocket Avionics System, Nexum Technologies',
+    description: 'Building a single stage rocket with a commercial payload as a part of the Deep Tech Initiative at FGCU, set to launch in September 2026',
     stack: ['Embedded Systems', 'C', 'Avionics', 'CAD'],
     category: 'Aerospace',
     role: 'Tech Lead / Software Engineer',
+    link: 'https://www.wgcu.org/science-tech/2026-05-01/fgcu-deep-tech-club-plans-rocket-launches-as-part-of-research-into-payload-issues',
   },
   {
     name: 'Trauma Patient MindState Simulator, Exonicus',

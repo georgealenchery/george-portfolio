@@ -10,7 +10,7 @@ const experience = [
     period: 'Mar 2026 — Present',
     location: 'Fort Myers, FL',
     description:
-      "Contribute to research, outreach, and event-based initiatives at FGCU's Dendritic Institute — a Human-Centered AI and Data Science research center. Work alongside faculty on ongoing AI and data science projects.",
+      "At the Dendritic Institute, I contribute to research, outreach, and event-based initiatives. Here, I work alongside faculty on ongoing AI and data science projects. I am also on the Instructional Design team, currently working on building out the AI Academy curriculum under the guidance of Prof. Leandro de Castro Silva, PhD.",
     image: dendriticImg,
     imageAlt: 'George at the FGCU Dendritic Institute',
   },
@@ -20,7 +20,7 @@ const experience = [
     period: 'Aug 2025 — May 2026',
     location: 'Fort Myers, FL',
     description:
-      "Shipped C# middleware in Unity on a cross-functional intern team, working across the full SDLC to deliver a user-ready experience for Exonicus's flagship real-time VR trauma training simulator against a hard release deadline.",
+      "At Exonicus, I was a software engineering intern, constructing C# middleware scripts in Unity on a cross-functional intern team, working across the full SDLC to deliver a user-ready experience for Exonicus's flagship real-time VR trauma training simulator against a hard release deadline. Here, I collaborated with my fellow intern classmates under the guidance of our mentor, Chad Josewski, lead engineer at Exonicus.",
     image: exonicusImg,
     imageAlt: 'George at Exonicus',
     reverse: true,
@@ -31,7 +31,7 @@ const experience = [
     period: 'Jan 2026 — Apr 2026',
     location: 'Fort Myers, FL',
     description:
-      'Studied a family of parameter-dependent weighting polynomials proposed to smooth noisy data functions. Applied scientific computational tools and linear algebra to analyze the polynomials and their companion matrices.',
+      'At the FGCU Mathematics Department, I studied a family of parameter-dependent weighting polynomials proposed to smooth noisy data functions. With the help and leadership of Dr. Cara D. Brooks, I strategized a computational process using MATLAB to analyze the roots of the polynomial family through spectral and pseudospectral analysis of their respective companion matrices.',
     image: mathImg,
     imageAlt: 'George presenting math research at FGCU',
   },

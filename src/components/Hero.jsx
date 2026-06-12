@@ -162,7 +162,8 @@ export default function Hero() {
         </h1>
         <p className="hero-role">ML Engineer / AI Systems Developer / IEEE Published Author</p>
         <p className="hero-bio">
-          I build machine learning systems and streamlined AI solutions for real-world applications.
+          I love to build things. I am driven by the idea of learning new things and pushing past my limits. 
+          I strive to build impactful AI solutions and contribute to the field through research, development and hard work. 
         </p>
       </div>
 
@@ -178,7 +179,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <a href="#projects" className="hero-scroll">Click here to see some of my projects! Or, scroll down yourself.</a>
+      <a href="#projects" className="hero-scroll">See some of my projects!</a>
     </section>
   )
 }
