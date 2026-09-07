@@ -5,7 +5,7 @@ export default function Contact() {
     <section id="contact" className="contact">
       <span className="section-label">// CONTACT</span>
       <div className="contact-block">
-        <h2 className="contact-headline">Let's work together.</h2>
+        <h2 className="contact-headline">Connect with me!</h2>
         <div className="contact-links">
           <a href="mailto:georgealenchery70@gmail.com" className="contact-link">
             georgealenchery70@gmail.com
