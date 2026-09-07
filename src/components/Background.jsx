@@ -7,7 +7,7 @@ const stats = [
   { value: '1', label: 'IEEE-nominated paper' },
   { value: '1st', label: 'EagleHacks 2026' },
   {value: 'B.S.', label: 'Software Engineering @ FGCU, 2026' },
-  { value: 'M.S.', label: 'CS @ FGCU, Fall 2026' }
+  { value: 'M.S.', label: 'Computer Science @ FGCU, Fall 2026' }
 ]
 
 export default function Background() {
@@ -25,8 +25,7 @@ export default function Background() {
       <div className="background-grid">
         <div className="background-prose">
           <p>
-            I'm a computer science graduate beginning my M.S. at Florida Gulf Coast University in Fall 2026,
-            concentrating in AI &amp; Data Science. Currently, I work at the Dendritic Institute at FGCU, a Human Centered AI &amp; 
+            I'm a Graduate Student studying Computer Science, with a concentration in Data Science and Artificial Intelligence at FGCU. Currently, I work at the Dendritic Institute at FGCU, a Human Centered AI &amp; 
             Data Science research lab. There, I am a graduate research assistant, exploring machine learning applications and AI pedagogy.
             </p>
             <p>
