@@ -20,13 +20,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
+body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 
 a {
   color: inherit;
