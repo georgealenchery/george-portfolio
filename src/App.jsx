@@ -1,3 +1,4 @@
+import ResumeBanner from './components/ResumeBanner.jsx'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
@@ -9,6 +10,7 @@ import Contact from './components/Contact.jsx'
 export default function App() {
   return (
     <>
+      <ResumeBanner />
       <Nav />
       <Hero />
       <Stack />
