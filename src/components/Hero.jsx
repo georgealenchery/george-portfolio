@@ -162,8 +162,8 @@ export default function Hero() {
         </h1>
         <p className="hero-role">ML Engineer / AI Systems Developer / IEEE Published Author</p>
         <p className="hero-bio">
-          I love to build things. I am driven by the idea of learning new things and pushing past my limits. 
-          I strive to build impactful AI solutions and contribute to the field through research, development and hard work. 
+          Hi! My name is George, and I'm an aspiring software engineer, with a formal background in 
+          machine learning, data science, and artificial intelligence. Welcome to my website.
         </p>
       </div>
 
