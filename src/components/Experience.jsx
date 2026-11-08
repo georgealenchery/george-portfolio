@@ -1,4 +1,5 @@
 import './Experience.css'
+import SectionHeader from './SectionHeader.jsx'
 import dendriticImg from '../assets/dendritic_pic.jpeg'
 import exonicusImg from '../assets/exonicus.jpg'
 import mathImg from '../assets/math_present.JPG'
@@ -40,33 +41,22 @@ const experience = [
 export default function Experience() {
   return (
     <section id="experience" className="experience">
-      <span className="section-label">// EXPERIENCE</span>
+      <SectionHeader title="Experience" />
       <div className="experience-list">
         {experience.map((item) => (
-          <div key={item.company + item.role} className="experience-entry">
-            <div className={`experience-body${item.reverse ? ' experience-body--reverse' : ''}`}>
-              <div className="experience-text">
-                <div className="experience-header">
-                  <div className="experience-left">
-                    <h3 className="experience-company">{item.company}</h3>
-                    <span className="experience-role">{item.role}</span>
-                  </div>
-                  <div className="experience-right">
-                    <span className="experience-period">{item.period}</span>
-                    <span className="experience-location">{item.location}</span>
-                  </div>
-                </div>
-                <p className="experience-desc">{item.description}</p>
-              </div>
-              <div className="experience-image-wrap">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  className="experience-image"
-                />
-              </div>
+          <article
+            key={item.company + item.role}
+            className={`experience-entry${item.reverse ? ' experience-entry--reverse' : ''}`}
+          >
+            <div className="experience-text">
+              <h3 className="experience-company">{item.company}</h3>
+              <p className="experience-meta">{item.role}</p>
+              <p className="experience-meta">{item.period}</p>
+              <p className="experience-meta experience-location">{item.location}</p>
+              <p className="experience-desc">{item.description}</p>
             </div>
-          </div>
+            <img src={item.image} alt={item.imageAlt} className="experience-image" />
+          </article>
         ))}
       </div>
     </section>

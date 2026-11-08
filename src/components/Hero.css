@@ -1,139 +1,151 @@
 .hero {
-  min-height: 100vh;
-  padding: 0 60px;
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
-  column-gap: 60px;
-  align-items: center;
   position: relative;
-}
-
-.hero-content {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.hero-images {
-  grid-column: 2;
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 250px 250px;
-  gap: 16px;
-  align-self: center;
-}
-
-.hero-img {
-  border: var(--border);
-  box-shadow: var(--shadow);
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 56px) 63px 0;
   overflow: hidden;
 }
 
-.hero-img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-img--ace {
-  grid-column: 1;
-  grid-row: 1 / 3;
-}
-
-.hero-img--coffee {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.hero-img--rock {
-  grid-column: 2;
-  grid-row: 2;
+.hero-window {
+  width: 825px;
+  max-width: 100%;
 }
 
 .hero-name {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 80px;
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-bottom: 32px;
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.hero-body p {
+  font-size: 21px;
+  line-height: 30px;
 }
 
 .hero-role {
-  font-family: var(--font-mono);
-  font-size: 15px;
-  color: var(--muted);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.hero-bio {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--text);
-  max-width: 480px;
-  line-height: 1.5;
+/* Right side: starburst + cutout, anchored to the bottom of the hero */
+.hero-stage {
+  position: absolute;
+  left: 53%;
+  bottom: 0;
+  width: 600px;
+  height: 800px;
+  pointer-events: none;
 }
 
-.hero-scroll {
-  grid-column: 1;
-  grid-row: 2;
-  align-self: end;
-  padding-bottom: 48px;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--accent);
-  letter-spacing: 0.02em;
-  transition: opacity 0.15s ease;
+.hero-cutout {
+  position: absolute;
+  left: 0;
+  bottom: -155px;
+  width: 256px;
+  height: auto;
 }
 
-.hero-scroll:hover {
-  opacity: 0.75;
+.burst {
+  position: absolute;
+  left: 149px;
+  bottom: 358px;
+  width: 396px;
+  pointer-events: auto;
 }
 
-@media (max-width: 768px) {
+.burst-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.burst-text {
+  position: absolute;
+  /* centre of the orange body of the starburst image */
+  left: 51%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: 212px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.burst-text a {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.burst-text a:hover {
+  color: var(--win-blue);
+}
+
+/* Mid-size desktops/laptops: tuck the starburst + cutout against the right
+   edge so they clear the name window */
+@media (max-width: 1600px) and (min-width: 1281px) {
+  .hero-stage {
+    left: auto;
+    right: 30px;
+    width: 520px;
+  }
+
+  .hero-cutout {
+    left: 90px;
+  }
+
+  .burst {
+    left: auto;
+    right: 0;
+    bottom: 380px;
+    width: 340px;
+  }
+
+  .burst-text {
+    width: 170px;
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 1280px) {
   .hero {
-    padding: 0 24px;
-    padding-top: 108px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    row-gap: 40px;
-  }
-
-  .hero-content {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .hero-images {
-    grid-column: 1;
-    grid-row: 2;
-    grid-template-rows: 180px 180px;
-    gap: 12px;
-  }
-
-  .hero-scroll {
-    grid-column: 1;
-    grid-row: 3;
-    padding-bottom: 40px;
-    align-self: auto;
+    padding: calc(var(--nav-h) + 30px) 20px 0;
   }
 
   .hero-name {
-    font-size: 52px;
-    margin-bottom: 24px;
+    font-size: 30px;
   }
 
-  .hero-role {
-    font-size: 13px;
+  .hero-body p {
+    font-size: 20px;
+    line-height: 28px;
   }
 
-  .hero-bio {
-    font-size: 17px;
+  .hero-stage {
+    position: relative;
+    left: auto;
+    width: 425px;
+    max-width: 100%;
+    height: 650px;
+    margin: 40px auto 0;
+  }
+
+  .hero-cutout {
+    left: 13px;
+    bottom: -112px;
+    width: 225px;
+  }
+
+  .burst {
+    left: auto;
+    right: 0;
+    bottom: auto;
+    top: 0;
+    width: 350px;
+  }
+
+  .burst-text {
+    width: 188px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }

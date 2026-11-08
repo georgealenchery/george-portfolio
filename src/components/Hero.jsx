@@ -1,8 +1,55 @@
-import { useState, useEffect, useRef } from 'react'
 import './Hero.css'
-import aceAiImg from '../assets/ace-ai-pic.jpg'
-import coffeeImg from '../assets/coffee_and_croissant.jpg'
-import rockImg from '../assets/rock-climbing.PNG'
+import cutoutImg from '../assets/me-cutout.png'
+import starburstImg from '../assets/starburst.png'
+
+const RESUME_PATH = '/George_Alenchery_Resume_SWE.pdf'
+
+function Starburst() {
+  return (
+    <div className="burst">
+      <img src={starburstImg} alt="" className="burst-img" aria-hidden="true" />
+      <p className="burst-text">
+        Don't want to read the whole website?{' '}
+        <a href={RESUME_PATH} download="George_Alenchery_Resume_SWE.pdf">
+          Click here to download my resume
+        </a>
+      </p>
+    </div>
+  )
+}
+
+export default function Hero() {
+  return (
+    <section className="hero" id="top">
+      <div className="hero-window win">
+        <h1 className="win-title hero-name">george alenchery, B.Sc.</h1>
+        <div className="win-body hero-body">
+          <p className="hero-role">ML Engineer - AI Systems Developer - Published Researcher</p>
+          <p className="hero-bio">
+            Hi! My name is George, and I'm a software engineer, with a formal background in
+            machine learning, data science, and artificial intelligence. Welcome to my website.
+          </p>
+        </div>
+      </div>
+
+      <div className="hero-stage">
+        <Starburst />
+        <img src={cutoutImg} alt="George Alenchery" className="hero-cutout" />
+      </div>
+    </section>
+  )
+}
+
+/* ==========================================================================
+   OLD HERO ANIMATIONS — disabled for the retro redesign, kept for later.
+   To restore: re-add `import { useState, useEffect, useRef } from 'react'`,
+   uncomment these hooks, and use them in Hero() like the previous version:
+     const sectionRef = useRef(null)
+     const [line1, line2] = useScrambleName()
+     const canvasRef = useParticles(sectionRef)
+     <section ref={sectionRef}> <canvas ref={canvasRef} className="hero-canvas" /> ...
+   The matching .hero-canvas CSS is commented out in index.css.
+   ==========================================================================
 
 const SCRAMBLE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&'
 const NAME_FLAT = 'GEORGEALENCHERY' // 15 chars
@@ -146,40 +193,4 @@ function useParticles(sectionRef) {
 
   return canvasRef
 }
-
-export default function Hero() {
-  const sectionRef = useRef(null)
-  const [line1, line2] = useScrambleName()
-  const canvasRef = useParticles(sectionRef)
-
-  return (
-    <section className="hero" ref={sectionRef}>
-      <canvas ref={canvasRef} className="hero-canvas" />
-
-      <div className="hero-content">
-        <h1 className="hero-name">
-          {line1}<br />{line2}
-        </h1>
-        <p className="hero-role">ML Engineer / AI Systems Developer / IEEE Published Author</p>
-        <p className="hero-bio">
-          Hi! My name is George, and I'm an aspiring software engineer, with a formal background in 
-          machine learning, data science, and artificial intelligence. Welcome to my website.
-        </p>
-      </div>
-
-      <div className="hero-images">
-        <div className="hero-img hero-img--ace">
-          <img src={aceAiImg} alt="Ace.AI project" />
-        </div>
-        <div className="hero-img hero-img--coffee">
-          <img src={coffeeImg} alt="Coffee and croissant" />
-        </div>
-        <div className="hero-img hero-img--rock">
-          <img src={rockImg} alt="Rock climbing" />
-        </div>
-      </div>
-
-      <a href="#projects" className="hero-scroll">See some of my projects!</a>
-    </section>
-  )
-}
+*/

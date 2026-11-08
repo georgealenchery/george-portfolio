@@ -3,13 +3,12 @@ import './Nav.css'
 export default function Nav() {
   return (
     <nav className="nav">
-      <a href="#" className="nav-logo">GA</a>
       <ul className="nav-links">
-        <li><a href="#background">Background</a></li> 
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#background">about me</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        {/* <li><a href="#stack">stack</a></li> — tech ticker disabled for now */}
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
   )

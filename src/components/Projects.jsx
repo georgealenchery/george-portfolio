@@ -1,4 +1,5 @@
 import './Projects.css'
+import SectionHeader from './SectionHeader.jsx'
 
 const projects = [
   {
@@ -9,16 +10,16 @@ const projects = [
     role: 'Backend Developer',
     link: 'https://github.com/georgealenchery/ace.ai',
   },
-    {
+  {
     name: 'Parking Assistance for Trailer-Truck Transport Vehicles Using Sensor Fusion and Motion Planning',
     description: 'Conference-nominated research paper presenting an autonomous parking framework for articulated trucks during low-speed docking maneuvers, combining sensor fusion and motion planning to solve a hard real-world robotics problem. Published May 2026.',
     stack: ['Python', 'Sensor Fusion', 'Motion Planning', 'ROS', 'LIDAR'],
     category: 'Research / Robotics',
     role: 'Lead Author & Head Researcher',
     link: 'https://arxiv.org/abs/2605.02716',
-  },  
+  },
   {
-    name: 'Rocket Avionics System, Nexum Technologies',
+    name: 'Rocket Avionics System, Deep Tech Initiative',
     description: 'Building a single stage rocket with a commercial payload as a part of the Deep Tech Initiative at FGCU, set to launch in September 2026',
     stack: ['Embedded Systems', 'C', 'Avionics', 'CAD'],
     category: 'Aerospace',
@@ -37,41 +38,37 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="projects">
-      <span className="section-label">// PROJECTS</span>
-      <div className="projects-list">
+      <SectionHeader title="Projects" />
+      <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.name} className="project-card">
-            <div className="project-card-left">
-              <h3 className="project-name">{project.name}</h3>
+          <article key={project.name} className="win project-card">
+            <h3 className="win-title project-name">
+              <span>{project.name}</span>
+              <span className="win-controls" aria-hidden="true">
+                <span>_</span><span>□</span><span>×</span>
+              </span>
+            </h3>
+            <div className="win-body project-body">
+              <p className="project-category">{project.category}</p>
               <p className="project-desc">{project.description}</p>
-              {project.role && (
-                <p className="project-role">
-                  <span className="project-role-label">role</span>
-                  {project.role}
-                </p>
-              )}
-              <div className="project-tags">
+              <p className="project-role"><strong>Role:</strong> {project.role}</p>
+              <ul className="project-tags">
                 {project.stack.map((tag) => (
-                  <span key={tag} className="tag">{tag}</span>
+                  <li key={tag} className="project-tag">{tag}</li>
                 ))}
-              </div>
-            </div>
-            <div className="project-card-right">
-              <span className="project-category">{project.category}</span>
-              {project.link ? (
+              </ul>
+              {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-arrow project-arrow-link"
+                  className="win-button project-link"
                 >
-                  →
+                  Open ↗
                 </a>
-              ) : (
-                <span className="project-arrow">→</span>
               )}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
